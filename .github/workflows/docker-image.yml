@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker push
-      run : docker push (anitachoen) anitachoen/exorev1
+      run : docker push anitachoen/exorev1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag anitachoen/exorev1:latest
         
