@@ -1,11 +1,9 @@
-From ubuntu:21.10
-Label maintainer ="Anita&Kiwi"
+FROM centos:7
+RUN yum update -y && yum install httpd -y && yum clean all
 
-RUN apt-get ubdate \
-	&& apt-get install -y apache2
-	
-COPY html/* /var/www/html/*
-
-WORKDIR /var/www/html
-CMD ["apachectl", "-D", "FOREGROUND"]
+COPY index.html /var/www/html/
 EXPOSE 80
+
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+
+#kiwi
