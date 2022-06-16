@@ -1,4 +1,4 @@
-From ubunt:21.10
+From ubuntu:21.10
 Label maintainer ="Anita&Kiwi"
 
 RUN apt-get ubdate \
